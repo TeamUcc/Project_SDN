@@ -293,3 +293,76 @@ sudo python topo_basica.py
 - **Presentación**: ¿Puedes explicar y demostrar tu trabajo?
 - **Comprensión**: ¿Entiendes los conceptos SDN subyacentes?
 
+
+
+##  Estructura recomendada del repo
+
+```
+Proyecto-SDN/
+│
+├── docs/                   # Documentación
+│   ├── guia_instalacion.md # Pasos para montar el entorno
+│   ├── diseño_red.png      # Imagen del diagrama de red
+│   ├── informe.md          # Avances o informe final
+│
+├── configs/                # Configuración de red
+│   ├── topologia_mininet.py # Script de la topología (si es SDN)
+│   ├── reglas_iptables.sh   # Ejemplo de reglas (si es Linux normal)
+│
+├── scripts/                # Automatización
+│   ├── start_mininet.sh    # Script para correr la red
+│   ├── test_connectivity.sh # Script para probar pings/iperf
+│
+├── resultados/             # Evidencias
+│   ├── pruebas_ping.txt
+│   ├── pruebas_iperf.txt
+│   ├── capturas/
+│       ├── ping.png
+│       ├── flujo_ONOS.png
+│
+└── README.md               # Explicación principal del proyecto
+```
+
+---
+
+##  Qué pueden subir
+
+* **Código / scripts**
+
+  * Topologías en **Mininet** (`.py`)
+  * Scripts de pruebas (`.sh`)
+  * Configuraciones (`.conf`)
+
+* **Documentación**
+
+  * Un `README.md` con:
+
+    * Integrantes del grupo
+    * Objetivo del proyecto
+    * Pasos de instalación y ejecución
+    * Capturas de pruebas (ping, iperf, reglas de SDN)
+  * Archivos `.md` con explicaciones detalladas
+
+* **Diagramas y evidencias**
+
+  * Topología de la red (hecha en Draw\.io, GNS3, o a mano y escaneada).
+  * Screenshots de las pruebas funcionando.
+  * Logs de ejecución (`ping`, `iperf`, etc.).
+
+* **Informe**
+
+  * Pueden hacer el informe en Word o PDF, pero mejor en **Markdown (`.md`)** para que quede dentro del repo.
+
+---
+
+## Consejo para la nota
+
+El profe va a valorar mucho si el repo tiene:
+
+1. **README bien explicado** (que cualquiera pueda seguir y montar la red).
+2. **Scripts que corran sin errores** (ejemplo: `bash start_mininet.sh`).
+3. **Resultados guardados como evidencia** (logs, capturas, etc.).
+
+---
+
+
