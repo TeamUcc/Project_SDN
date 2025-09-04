@@ -31,7 +31,7 @@ sudo ./util/install.sh -a
 sudo mn --test pingall
 ```
 
-Si ves que los hosts se hacen *ping* correctamente, **Mininet está listo** ✅.
+Si ves que los hosts se hacen *ping* correctamente, **Mininet está listo** .
 
 ---
 
@@ -71,7 +71,7 @@ ONOS tiene varias formas de instalación. Vamos a hacerlo con **Docker** (más f
    sudo usermod -aG docker $USER
    ```
 
-   > ⚠️ Cierra y vuelve a abrir la sesión para aplicar el cambio de grupo.
+   >  ! Cierra y vuelve a abrir la sesión para aplicar el cambio de grupo.
 
 2. **Descargar imagen de ONOS**:
 
