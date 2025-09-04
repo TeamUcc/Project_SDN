@@ -1,3 +1,8 @@
+## Video de instalacion:
+https://www.youtube.com/watch?v=jqdTLxu7n3c
+
+
+
 # Environment
 ubuntu 22.04
 
