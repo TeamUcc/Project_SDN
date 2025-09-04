@@ -23,9 +23,10 @@ ubuntu 22.04
  $ sudo apt install openjdk-8-jdk
 ```
   
-```
-Append environment variable JAVA_HOME to ~/.bashrc
-```
+
+# Append environment variable JAVA_HOME to ~/.bashrc
+- Ya hecho el paso anterior, poner la letra i (INSERT)
+
 
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
