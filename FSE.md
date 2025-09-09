@@ -142,38 +142,81 @@ Req = 318.7Ω
 
 ---
 
-## EJERCICIOS MIXTOS
 
-### Análisis General para Circuitos Mixtos
+# Ejercicio Mixto 1
 
-Para los circuitos mixtos mostrados en las imágenes, el procedimiento es:
+**R1 = 1 kΩ** en serie con el **paralelo** de **R2 = 470 Ω** y **R3 = 680 Ω**. **V = 9 V**.
 
-1. **Identificar las conexiones serie y paralelo**
-2. **Simplificar paso a paso:**
-   - Calcular resistencias equivalentes de secciones paralelas
-   - Combinar con resistencias en serie
-   - Reducir hasta obtener Req total
+**1) Equivalentes**
 
-3. **Calcular corriente total:** IT = V/Req
+* $R_{23}=\left(\frac{1}{470}+\frac{1}{680}\right)^{-1}= \mathbf{278\ \Omega}$
+* $R_{eq}=R_1+R_{23}=1000+277.913=\mathbf{1.28\ k\Omega}$
 
-4. **Trabajar hacia atrás:**
-   - Calcular tensiones en cada nodo
-   - Determinar corrientes en cada rama
-   - Calcular potencias individuales
+**2) Corriente total**
 
-### Ejemplo de Metodología:
+* $I_T=\dfrac{9}{1277.913}=\mathbf{7.04\ mA}$
 
-**Para un circuito con R1 en serie con (R2 || R3):**
+**3) Tensiones**
 
-1. Req_paralelo = (R2 × R3)/(R2 + R3)
-2. Req_total = R1 + Req_paralelo  
-3. IT = V/Req_total
-4. V1 = IT × R1
-5. V_paralelo = V - V1
-6. I2 = V_paralelo/R2
-7. I3 = V_paralelo/R3
+* $V_{R1}=I_T\,R_1= \mathbf{7.04\ V}$
+* $V_{R23}=I_T\,R_{23}= \mathbf{1.96\ V}$  (igual en R2 y R3 por estar en paralelo)
+
+**4) Corrientes de rama**
+
+* $I_2=\dfrac{1.957}{470}= \mathbf{4.16\ mA}$
+* $I_3=\dfrac{1.957}{680}= \mathbf{2.88\ mA}$
+  (Chequeo: $I_2+I_3 \approx I_T$)
+
+**5) Potencias**
+
+* $P_1=\dfrac{V_{R1}^2}{R_1}= \mathbf{49.6\ mW}$
+* $P_2=\dfrac{1.957^2}{470}= \mathbf{8.15\ mW}$
+* $P_3=\dfrac{1.957^2}{680}= \mathbf{5.63\ mW}$
+* $P_T=V\,I_T= \mathbf{63.4\ mW}$ (≈ $P_1+P_2+P_3$)
+
+> Todas las resistencias trabajan holgadas con ¼ W.
 
 ---
+
+# Ejercicio Mixto 2
+
+**R1 = 220 Ω** en **paralelo** con **R2 = 330 Ω**; ese bloque en **serie** con el **paralelo** de **R3 = 1 kΩ** y **R4 = 2.2 kΩ**. **V = 9 V**.
+
+**1) Equivalentes de bloques**
+
+* $R_{12}=\left(\frac{1}{220}+\frac{1}{330}\right)^{-1}= \mathbf{132\ \Omega}$
+* $R_{34}=\left(\frac{1}{1000}+\frac{1}{2200}\right)^{-1}= \mathbf{687.5\ \Omega}$
+* $R_{eq}=R_{12}+R_{34}= \mathbf{819.5\ \Omega}$
+
+**2) Corriente total**
+
+* $I_T=\dfrac{9}{819.5}= \mathbf{10.98\ mA}$
+
+**3) Tensiones de bloque**
+
+* $V_{12}=I_T\,R_{12}= \mathbf{1.45\ V}$ (misma en R1 y R2)
+* $V_{34}=I_T\,R_{34}= \mathbf{7.55\ V}$ (misma en R3 y R4)
+
+**4) Corrientes de cada resistor**
+
+* $I_1=\dfrac{1.45}{220}= \mathbf{6.59\ mA}$
+* $I_2=\dfrac{1.45}{330}= \mathbf{4.39\ mA}$
+* $I_3=\dfrac{7.55}{1000}= \mathbf{7.55\ mA}$
+* $I_4=\dfrac{7.55}{2200}= \mathbf{3.43\ mA}$
+  (Chequeos: $I_1+I_2=I_T$ y $I_3+I_4=I_T$)
+
+**5) Potencias**
+
+* $P_1=\dfrac{1.45^2}{220}= \mathbf{9.55\ mW}$
+* $P_2=\dfrac{1.45^2}{330}= \mathbf{6.37\ mW}$
+* $P_3=\dfrac{7.55^2}{1000}= \mathbf{57.0\ mW}$
+* $P_4=\dfrac{7.55^2}{2200}= \mathbf{25.9\ mW}$
+* $P_T=V\,I_T= \mathbf{98.8\ mW}$ (≈ suma de potencias)
+
+> Máxima disipación ≈ **57 mW** en R3 → ¼ W sigue siendo seguro.
+
+
+
 
 ## 8. Análisis de Error y Conclusiones
 
