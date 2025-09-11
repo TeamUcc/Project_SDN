@@ -258,4 +258,14 @@ response = requests.post(f"{BASE_URL}/login", json=auth_data)
 print("Respuesta del login:", response.json())
 ```
 
-¡Con esto deberías tener una comprensión completa del ejercicio!
+powershell
+# Eliminar permisos heredados
+icacls "C:\ssh_keys\breiner.pem" /inheritance:r
+
+# Dar permiso solo de lectura al usuario actual
+icacls "C:\ssh_keys\breiner.pem" /grant:r "desktop-3h0ku6i\usuario:R"
+
+# Eliminar permisos de otros grupos (si aparecen)
+icacls "C:\ssh_keys\breiner.pem" /remove "NT AUTHORITY\Usuarios autentificados"
+
+
