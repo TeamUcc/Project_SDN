@@ -269,3 +269,100 @@ icacls "C:\ssh_keys\breiner.pem" /grant:r "desktop-3h0ku6i\usuario:R"
 icacls "C:\ssh_keys\breiner.pem" /remove "NT AUTHORITY\Usuarios autentificados"
 
 
+¡Claro! Aquí tienes una guía completa y estructurada de lo que realizaste en tu ejercicio de comunicación entre servidores usando Flask en una máquina virtual de Azure. Esta guía te puede servir como base para tu informe académico o técnico:
+
+---
+
+## 📝 Guía Técnica: Comunicación entre Servidores con Flask en Azure
+
+### 👤 Información General
+
+- *Entorno:* Máquina virtual Ubuntu en Azure
+- *Tecnología usada:* Python 3, Flask, UFW (firewall), Azure Networking
+- *Objetivo:* Exponer un servicio web en Flask y permitir su consumo desde otra máquina
+
+---
+
+### 🔧 Paso 1: Preparación del entorno
+
+1. *Acceso a la VM por SSH*
+   - Conectaste a la VM usando el usuario azureuser.
+
+2. *Verificación de Python*
+   - Comprobaste la versión con:
+     bash
+     python3 --version
+     
+
+3. *Instalación de dependencias*
+   - Instalaste los paquetes necesarios:
+     bash
+     sudo apt update
+     sudo apt install python3-full python3-venv python3-pip
+     
+
+4. *Creación de entorno virtual*
+   - Para evitar conflictos con el entorno gestionado por el sistema:
+     bash
+     python3 -m venv flask_env
+     source flask_env/bin/activate
+     
+
+5. *Instalación de Flask*
+   - Dentro del entorno virtual:
+     bash
+     pip install Flask
+     
+
+---
+
+### 🧱 Paso 2: Desarrollo del servidor Flask
+
+1. **Archivo app.py**
+   - Creaste un servidor básico con un endpoint /saludo:
+     python
+     from flask import Flask, jsonify
+
+     app = Flask(__name__)
+
+     @app.route('/saludo')
+     def saludo():
+         return jsonify(mensaje="Hola desde el servidor!")
+
+     if __name__ == '__main__':
+         app.run(host='0.0.0.0', port=5000)
+     
+
+2. *Ejecución del servidor*
+   - Lo ejecutaste con:
+     bash
+     python3 app.py
+     
+
+   - Flask mostró que estaba corriendo en:
+     
+     http://127.0.0.1:5000
+     http://172.16.0.4:5000
+     
+
+---
+
+### 🔐 Paso 3: Configuración de red y seguridad
+
+1. *Apertura del puerto 5000 en el firewall*
+   bash
+   sudo ufw allow 5000/tcp
+   
+
+2. *Verificación de conectividad desde otra VM*
+   - Desde la segunda máquina, hiciste una petición:
+     bash
+     curl http://172.16.0.4:5000/saludo
+     
+
+   - El servidor respondió con:
+     json
+     {"mensaje": "Hola desde el servidor!"}
+     
+
+---
