@@ -75,7 +75,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/sdn-onos-mininet.git
+git clone https://github.com/TeamUcc/Project_SDN.git
 cd sdn-onos-mininet
 
 # Ejecutar script de setup automático
