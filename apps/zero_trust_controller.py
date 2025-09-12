@@ -176,6 +176,7 @@ class ZeroTrustController(app_manager.RyuApp):
             self.stats['blocked_attempts'] += 1
             return
 
+
         # Asignar rol por defecto a nuevos dispositivos
         if src_mac not in self.device_roles:
             self.device_roles[src_mac] = self.default_role
