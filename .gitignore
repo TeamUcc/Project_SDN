@@ -1,0 +1,44 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.log
+
+# Archivos de configuración local
+.env
+*.swp
+*.swo
+
+# Archivos de Docker
+*.pid
+*.sock
+
+# Archivos de Mininet
+mn.*
+*.pcap
+
+# Archivos de ONOS (si compilas localmente)
+onos/apache-karaf-*/data/
+onos/apache-karaf-*/instances/
+onos/apache-karaf-*/tmp/
+
+# Archivos de VSCode u otros editores
+.vscode/
+.idea/
+
+# Archivos de contenedores
+*.tar
+*.img
+
+# Archivos de pruebas
+tests/output/
+tests/__pycache__/
+
+# Ignorar todo en una carpeta excepto el .gitignore
+scripts/*
+!scripts/.gitignore
