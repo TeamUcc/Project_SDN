@@ -1,5 +1,5 @@
 Para eliminar **todo lo que has instalado** (Mininet, ONOS en Docker, redes de Docker, etc.) y dejar tu sistema limpio, sigue estos pasos:
-
+15482hsC.vc
 ---
 
 ## **1. Eliminar la topología de Mininet**
