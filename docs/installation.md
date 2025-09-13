@@ -2,4 +2,9 @@ https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.yo
 
 
 
+
+
+https://ernie55ernie.github.io/sdn/2019/03/25/install-mininet-and-ryu-controller.html
+
 https://github.com/archanas23/SDN-Project
+
